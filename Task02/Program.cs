@@ -3,15 +3,38 @@
 3 -> Среда
 5 -> Пятница
 Console.WriteLine("Hello, World!");*/
-Console.WriteLine("Введите дату: ");
-int number = Convert.ToInt32(Console.ReadLine());
-int Monday = 1
-int square = number * number;
-    if (square == numberB)
-    {
-        Console.WriteLine($"Квадратом числа {numberA} является число {numberB}");
-    }
-    else
-    {
-        Console.WriteLine($"Квадратом числа {numberA} не является число {numberB}");
-    }
+
+Console.WriteLine("Введите дату: "); // вводит в терминал текст//
+string a = Console.ReadLine();  //  
+if (a == "1")
+{
+    Console.WriteLine("Понедельник");
+}
+else if (a == "2")
+{
+    Console.WriteLine("Вторник");
+}
+else if (a == "3")
+{
+    Console.WriteLine("Среда");
+}
+else if (a == "4")
+{
+    Console.WriteLine("Четверг");
+}
+else if (a == "5")
+{
+    Console.WriteLine("Пятница");
+}
+else if (a == "6")
+{
+    Console.WriteLine("Суббота");
+}
+else if (a == "7")
+{
+    Console.WriteLine("Воскресенье");
+}
+else
+{
+    Console.WriteLine("Введите корректно данные");
+}
