@@ -8,13 +8,13 @@ Console.WriteLine("Введите первое число: ");
 int numberA = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число: ");
 int numberB = Convert.ToInt32(Console.ReadLine());
-int square = numberA * numberA;
-    if (square == numberB)
+int square = numberB * numberB;
+    if (square == numberA)
     {
-        Console.WriteLine($"Квадратом числа {numberA} является число {numberB}");
+        Console.WriteLine($"Квадратом числа {numberB} является число {numberA}");
     }
     else
     {
-        Console.WriteLine($"Квадратом числа {numberA} не является число {numberB}");
+        Console.WriteLine($"Квадратом числа {numberB} не является число {numberA}");
     }
 
