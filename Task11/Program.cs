@@ -8,8 +8,8 @@
 int number = new Random().Next(100, 1000);
 Console.WriteLine($"Случайное число из отрезка 100 - 999 => {number}");
 
-
 int maxDigit=MaxDigit(number);
+Console.WriteLine($"{maxDigit}");
 
 int MaxDigit(int num)  // num = nunber
 {
@@ -19,8 +19,5 @@ int MaxDigit(int num)  // num = nunber
     return result;
 }
 
-
-    
-Console.WriteLine($"{maxDigit}");
 
 
