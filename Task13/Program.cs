@@ -10,17 +10,46 @@
 
 Console.WriteLine("Введите число");
 int number = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"{number} -> третьей цифры нет");
-while (number < 1000)
+int count=number;
+int ThirdDigit(int num)
 {
-    if (number > 99)
-    {
-        int thirdDigit = number % 10;
-        break; 
-        Console.WriteLine($"{number}-> {thirdDigit}");
-    }
-    break;
-     Console.WriteLine($"{number}-> третьей цифры нет");
+    return num % 10;
 }
 
+
+
+if (number > 1000)
+{
+    while (count > 1000)
+    {
+        count = count / 10;
+
+
+    }
+
+    Console.WriteLine($"{number}-> {ThirdDigit(count)}");
+
+}
+
+
+else if (number < 99 && number > -100)
+    Console.WriteLine($"{number}-> третьей цифры нет");
+
+else if (number < -99 && number > -1000)
+{
+    Console.WriteLine($"{number}-> {ThirdDigit(-number)}");
+}
+else if (number < -1000)
+{
+    while (number < -1000)
+    {
+        number = number / 10;
+    }
+
+    Console.WriteLine($"{number}-> {ThirdDigit(-number)}");
+}
+else
+{
+    Console.WriteLine($"{number}-> {ThirdDigit(number)}");
+}
 

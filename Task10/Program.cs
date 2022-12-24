@@ -9,8 +9,16 @@
 
 Console.WriteLine("ВВедите трехзначное число");
 int number = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine(number > 99 && number < 1000 ? $"({number}->{Degit(number)})" : "Введите корректное число");
+if(number > 99 && number < 1000)
+{
+Console.WriteLine($"({number}->{Degit(number)})");
+}
+else if(number < -99 && number > -1000)
+{
+    Console.WriteLine($"({number}->{Degit(-number)})");
+}
+else Console.WriteLine($"Введите корректное число");
+ 
 
 int Degit(int num)
 {
