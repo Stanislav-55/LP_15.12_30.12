@@ -15,8 +15,8 @@ Console.WriteLine(Square(numberA, numberB) ? $"{numberA} -> да" : $"{numberA} 
 
 bool Square(int numA, int numB)
 {
-    return numA * numA == numB || numB * numB == numA;
-}
+     return numA * numA == numB || numB * numB == 0;
+} 
 
 
 /*
