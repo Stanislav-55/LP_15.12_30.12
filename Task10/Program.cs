@@ -10,12 +10,12 @@
 Console.WriteLine("ВВедите трехзначное число");
 int number = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine(Degit(number) > 99 && Degit(number) < 1000 ? $"{second}" : "Введите корректное число");
+Console.WriteLine(number > 99 && number < 1000 ? $"({number}->{Degit(number)})" : "Введите корректное число");
 
 int Degit(int num)
 {
-    int second = (num / 10) % 10;
-    return second;
+    return (num / 10) % 10;
+        
 }
 /*
 if (number < 1000 && number > 99) 
@@ -25,5 +25,5 @@ if (number < 1000 && number > 99)
     Console.WriteLine($"{secondDigit}");
 }
 else
-Console.WriteLine("Введите корректное число");
-*/
+Console.WriteLine("Введите корректное число");*/
+

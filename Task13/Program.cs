@@ -13,11 +13,14 @@ int number = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine($"{number} -> третьей цифры нет");
 while (number < 1000)
 {
-    if(number>99)
+    if (number > 99)
     {
         int thirdDigit = number % 10;
+        break; 
         Console.WriteLine($"{number}-> {thirdDigit}");
     }
-    else Console.WriteLine($"{number}-> третьей цифры нет");
+    break;
+     Console.WriteLine($"{number}-> третьей цифры нет");
 }
+
 
