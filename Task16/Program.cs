@@ -10,10 +10,20 @@ Console.Write("Введите первое число: ");
 int numberA = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число: ");
 int numberB = Convert.ToInt32(Console.ReadLine());
-bool(numberA % numberB || numberB % numberA == 0);
-if (bool)
+
+Console.WriteLine(Square(numberA, numberB) ? $"{numberA} -> да" : $"{numberA} -> нет");
+
+bool Square(int numA, int numB)
+{
+    return numA * numA == numB || numB * numB == numA;
+}
+
+
+/*
+
+if (numberA % numberB == 0 || numberB % numberA == 0)
 
 {
-    Console.WriteLine($"{numberA},{NumberB} -> yes");
+    Console.WriteLine($"{numberA},{numberB} -> yes");
 }
-else Console.WriteLine($"{numberA},{NumberB} -> no");
+else Console.WriteLine($"{numberA},{numberB} -> no");*/
