@@ -43,7 +43,7 @@ switch (number)
     break;
     }
     default :
-    Console.WriteLine("Введите корректно число");
+    Console.WriteLine("Такого дня недели нет");
     break;
     
 }  

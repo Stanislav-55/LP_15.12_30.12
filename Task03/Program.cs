@@ -2,7 +2,7 @@
 название дня недели по заданному номеру.
 3 -> Среда
 5 -> Пятница
-Console.WriteLine("Hello, World!");*/
+*/
 
 Console.WriteLine("Введите дату: "); // вводит в терминал текст//
 string a = Console.ReadLine();  //  
