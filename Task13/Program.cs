@@ -15,41 +15,24 @@ int ThirdDigit(int num)
 {
     return num % 10;
 }
-
-
-
 if (number > 1000)
 {
     while (count > 1000)
     {
         count = count / 10;
-
-
     }
-
     Console.WriteLine($"{number}-> {ThirdDigit(count)}");
-
 }
-
-
-else if (number < 99 && number > -100)
-    Console.WriteLine($"{number}-> третьей цифры нет");
-
-else if (number < -99 && number > -1000)
-{
-    Console.WriteLine($"{number}-> {ThirdDigit(-number)}");
-}
+else if (number < 99 && number > -100) Console.WriteLine($"{number}-> третьей цифры нет");
+else if (number < -99 && number > -1000) Console.WriteLine($"{number}-> {ThirdDigit(-number)}");
 else if (number < -1000)
 {
-    while (number < -1000)
+    while (count < -1000)
     {
-        number = number / 10;
+        count = count / 10;
     }
+    Console.WriteLine($"{number}-> {ThirdDigit(-count)}");
+}
+else Console.WriteLine($"{number}-> {ThirdDigit(number)}");
 
-    Console.WriteLine($"{number}-> {ThirdDigit(-number)}");
-}
-else
-{
-    Console.WriteLine($"{number}-> {ThirdDigit(number)}");
-}
 
