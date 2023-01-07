@@ -19,6 +19,7 @@ if (number > 9999 && number < 100000)
     Console.WriteLine(Multiplicity(number)? $"Число {number} является палиндромом" : "Данное число не является палиндромом");
 }
 else System.Console.WriteLine("введите корректное число");
+
 bool Multiplicity(int num)
 {
     return num % 10 == num / 10000 && (number % 100)/10 == (number / 1000)%10;
