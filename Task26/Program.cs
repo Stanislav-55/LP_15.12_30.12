@@ -15,9 +15,10 @@ Console.WriteLine($"Количество цифр в числе = {countNumbers}
 }
 else
 {
-    Console.WriteLine($"Количество цифр в числе = 1");
-    
+    Console.WriteLine($"Количество цифр в числе = 1");  
 }
+
+
 int CountNumbers(int digit)
 {
     int count = 0;
