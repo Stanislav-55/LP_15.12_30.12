@@ -1,26 +1,35 @@
 ﻿/*
-Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
-3, 5 -> 243 (3⁵)
-
-2, 4 -> 16
+1, 2, 5, 7, 19, 6, 1, 33 -> [1, 2, 5, 7, 19, 6, 1, 33]
 */
-Console.WriteLine("Введите число: A ");
-int numberA = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число: B ");
-int numberB = Convert.ToInt32(Console.ReadLine());
-if (numberB > 0)
+int[] array = CreateArray(8);
+PrintArray(array);
+int min=8;
+int max=0;
+
+int[] CreateArray(int size,int min,int max)
 {
-    int degree = Degree(numberA, numberB);
-    Console.WriteLine($"{numberA}, {numberB} -> {degree}");
+    int[] arr = new int[size];
+    Random rnd = new Random();
+    
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = rnd.Next(mn, mx);
+    }
+    return arr;
 }
-Console.WriteLine("ВВедите коректно число:B");
-int Degree(int numA, int numB)
+void PrintArray(int[] arr)
 {
-    int degr = numA*numA;
-    int count = 0;
-    while (count < numB)
-        degr = degr * numA;
-    count = count + 1;
-    return degr;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"{arr[i]}," + " " );
+
+        if (i == arr.Length - 1) ;
+        {
+            Console.Write($"{arr[i]}");
+        }
+
+
+    }
 }
