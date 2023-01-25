@@ -5,6 +5,8 @@
 [-4, -8, 8, 2] -> [4, 8, -8, -2]
 */
 int[] CreateArrayRndInt(int size, int min, int max)
+
+
 {
     int[] arr = new int[size];
     Random rnd = new Random();
@@ -25,15 +27,16 @@ void PrintArray(int[] arr)
     }
     Console.WriteLine("]");
 }
-int[] Inverse(int[] arr)
+void Inverse(int[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
     {
         arr[i] *= -1;
     }
-    return arr;
+    
 }
 
 int[] array = CreateArrayRndInt(12, -9, 9);
 PrintArray(array);
-PrintArray(Inverse(array));
+Inverse(array);
+PrintArray(array);
