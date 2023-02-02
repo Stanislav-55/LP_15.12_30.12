@@ -1,23 +1,31 @@
-﻿bool IsExistNum(int[] arr, int num)
-{
-for (int i = 0; i < arr.Length; i++)
-{
-if (arr[i] == num)
-return true;
-}
-return false;
-}
+﻿Console.WriteLine("Введите размер массива:  ");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] numbers = new int[size];
+FillArrayRandomNumbers(numbers);
+Console.WriteLine("массив: ");
+PrintArray(numbers);
+int count = 0;
 
-Console.Write("Введите число, которое хотите найти в массиве: ");
-int number = Convert.ToInt32(Console.ReadLine());
-bool isExistNum = IsExistNum(array, number);
-if (isExistNum)
+for (int z = 0; z < numbers.Length; z++)
+if (numbers[z] % 2 == 0)
+count++;
+
+Console.WriteLine($"всего {numbers.Length} чисел, {count} из них чётные");
+
+void FillArrayRandomNumbers(int[] numbers)
 {
-Console.Write($"Число {number} есть в массиве - ");
-PrintArray(array);
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        numbers[i] = new Random().Next(100,1000);
+    }
 }
-else
+void PrintArray(int[] numbers)
 {
-Console.Write($"Числа {number} нет в массиве - ");
-PrintArray(array);
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+    {
+        Console.Write(numbers[i] + " ");
+    }
+    Console.Write("]");
+    Console.WriteLine();
 }
