@@ -7,7 +7,7 @@
 [1, 2, 3, 6, 2] -> 0
 [10, 11, 12, 13, 14] -> 5*/
 
-int[] array = CreateArrayRndInt(3, 1, 9);
+int[] array = CreateArrayRndInt(5, -100, 100);
 PrintArray(array);
 int countElements = CountElements(array);
 Console.WriteLine(countElements);
