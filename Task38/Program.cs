@@ -76,7 +76,7 @@ void PrintArrayDouble(double[] arr1)
     Console.WriteLine("]");
 }
 
-Double SubtractionDouble(double[] arr1)
+double SubtractionDouble(double[] arr1)
 {
     double max = arr1[0];
     double min = arr1[0];
