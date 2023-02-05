@@ -3,6 +3,8 @@
 [345, 897, 568, 234] -> 2  */
 int[] array = CreateArrayRndInt(5, 100, 999);
 PrintArray(array);
+int honestNumbers = HonestNumbers(array);
+Console.WriteLine($"всего {array.Length} чисел, {honestNumbers} из них чётные");
 
 int[] CreateArrayRndInt(int size, int min, int max)
 {
@@ -26,19 +28,16 @@ void PrintArray(int[] arr)
     Console.WriteLine("]");
 }
 
-/*int[] HonestNumbers(int[] arr);
-{*/
+int HonestNumbers(int[] arr)
+{
     int count = 0;
-
-    for (int i = 0; i < array.Length; i++)
-        if (array[i] % 2 == 0)
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i] % 2 == 0)
             count++;
-
-    Console.WriteLine($"всего {array.Length} чисел, {count} из них чётные");
-//}
-
-
+    }
+    return count;
+}
 
 
-//int honestNumbers=HonestNumbers(array);
-//PrintArray(honestNumbers);
+
