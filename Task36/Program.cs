@@ -8,6 +8,8 @@
 */
 int[] array = CreateArrayRndInt(5, 1, 99);
 PrintArray(array);
+int sumOfOddeElements = SumOfOddElements(array);
+Console.WriteLine($"Сумма нечетных элементов [i] в массиве = {sumOfOddeElements} ");
 
 int[] CreateArrayRndInt(int size, int min, int max)
 {
@@ -30,13 +32,14 @@ void PrintArray(int[] arr)
     }
     Console.WriteLine("]");
 }
-/*int SumOfOddElements (int arr)
-{*/
-int sum = 0;
 
-for (int i = 0; i < array.Length; i++)
-    if (i % 2 == 0)
-        sum = sum + array[i];
-
-Console.WriteLine($"Сумма нечетных элементов [i] в массиве = {sum} ");
-//}
+int SumOfOddElements(int[] arr)
+{
+    int sum = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (i % 2 == 0)
+            sum = sum + arr[i];
+    }
+    return sum;
+}

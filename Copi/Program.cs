@@ -1,31 +1,42 @@
-﻿Console.WriteLine("Введите размер массива:  ");
-int size = Convert.ToInt32(Console.ReadLine());
-int[] numbers = new int[size];
-FillArrayRandomNumbers(numbers);
-Console.WriteLine("массив: ");
-PrintArray(numbers);
-int count = 0;
+﻿int[] array = CreateArrayRndInt(5, 1, 99);
+PrintArray(array);
+int subtraction=Subtraction(array);
 
-for (int z = 0; z < numbers.Length; z++)
-if (numbers[z] % 2 == 0)
-count++;
 
-Console.WriteLine($"всего {numbers.Length} чисел, {count} из них чётные");
-
-void FillArrayRandomNumbers(int[] numbers)
+int[] CreateArrayRndInt(int size, int min, int max)
 {
-    for(int i = 0; i < numbers.Length; i++)
+    int[] arr = new int[size];
+    Random rnd = new Random();
+    for (int i = 0; i < arr.Length; i++)
     {
-        numbers[i] = new Random().Next(100,1000);
+        arr[i] = rnd.Next(min, max + 1);
     }
+    return arr;
 }
-void PrintArray(int[] numbers)
+
+void PrintArray(int[] arr)
 {
-    Console.Write("[ ");
-    for(int i = 0; i < numbers.Length; i++)
+    Console.Write("[");
+    for (int i = 0; i < arr.Length; i++)
     {
-        Console.Write(numbers[i] + " ");
+        if (i < arr.Length - 1) Console.Write(arr[i] + ",");
+        else Console.Write(arr[i]);
     }
-    Console.Write("]");
-    Console.WriteLine();
+    Console.WriteLine("]");
 }
+
+int Subtraction(int[] arr)
+{
+    int max = arr[0];
+    int min = arr[0];
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] > max) max = array[i];
+        if (array[i] < min) min = array[i];
+
+    }
+    int resylt = max - min;
+    return resylt;
+}
+Console.WriteLine($"разницу между максимальным и минимальным элементов массива 1 в массиве = {subtraction} ");
