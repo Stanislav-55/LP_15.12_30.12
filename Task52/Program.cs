@@ -70,4 +70,3 @@ PrintMatrix(array2D);
 Console.WriteLine(string.Empty);
 double[] createArrayDouble = CreateArrayDouble(array2D);
 PrintArray(createArrayDouble);
-Console.WriteLine($"Среднее арифметическое каждого столбца {a}");
